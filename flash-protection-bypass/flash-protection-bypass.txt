@@ -1,0 +1,10 @@
+# iMac 12,x flash protection bypass
+#
+# Works on cold boot. A sleep/wake cycle restores PRR and FLOCKDN flag
+#
+# by m0bil https://github.com/m0bil
+#
+# v1.0 10/05/2022
+
+# Removes PRR and FLOCKDN flag bios protection in PchSpiRuntime
+C194C6EA-B68C-4981-B64B-9BD271474B20 10 P:83FA200F84A5000000:83FA2090E9A5000000
