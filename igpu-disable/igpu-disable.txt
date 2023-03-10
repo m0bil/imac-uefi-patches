@@ -1,0 +1,15 @@
+# Patch iMac 12,x to fully disable the iGPU (IGD) at hardware level
+#
+# Removes the IGD device (Bus 0 Device 2 Function 0) from the PCI bus
+# IGD device will not be seen by OS and will not use any hardware resources
+# Fixes Windows BSOD when loading Intel Graphics Kernel Mode driver (igdkmd64.sys)
+# 
+# by m0bil https://github.com/m0bil
+#
+# v3.0 24/02/2023 - use PEI SA_PLATFORM_POLICY_PPI config instead of patching code 
+
+
+# PEI module PlatformStage1Pei
+# Force SaPlatformPolicyPpi->GtConfig->InternalGraphics = 0
+53984C6A-1B4A-4174-9512-A65E5BC8B278 12 P:0F92C0FEC0884106:0F92C030C0884106
+
