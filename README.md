@@ -19,6 +19,6 @@ Do multiple reads and make sure they are the same (diff). Always keep a backup o
 
 ## Warning
 
-You should be familiar with how to dissasemble your system and hardware programming of the eeprom chip. While this patches have been extensively tested,  there is always the risk of breaking some hardware parts.
+You should be familiar with how to disassemble your system and hardware programming of the eeprom chip. While this patches have been extensively tested,  there is always the risk of breaking some hardware parts.
 
 **PROCEED AT YOUR OWN RISK!**
