@@ -19,7 +19,6 @@ UEFIPatch my_bios.img igpu-disable.txt -o new_bios.img
 ```
 
 After applying it, program ``new_bios.img`` back to eeprom chip.   
-If you have previuosly unprotected your eeprom use a software flasher like flashrom o Intel FPT, else use a hardware programmer like CH341A + SOIC clip. 
 
 ## Notes
 
