@@ -12,7 +12,7 @@ Some patches may work on other same era Macs. Look at description inside patch f
 
 ## How to backup you firmware (bios)
 
-Create a [GRML linux](https://grml.org/) usb, boot from it and use flashrom command to dump your eeprom: `flashrom -p internal -r my_bios.img`  
+Create a [GRML linux](https://github.com/Ausdauersportler/GRML-FLASH/releases) usb, boot from it and use flashrom command to dump your eeprom: `flashrom -p internal -r my_bios.img`  
 If reading fails with error "Multiple flash chip definitions..." add option `-c "CHIP_MODEL"` to flashrom.  
 Do multiple reads and make sure they are the same. Always keep a backup of this file.
 
