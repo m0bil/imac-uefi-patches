@@ -1,7 +1,8 @@
-# iMac 12,x 64bit PCIe address space enabler (aka UEFI Windows audio ACPI patch)
+# iMac 12,x 64bit PCIe address space enabler
+# (aka UEFI Windows audio ACPI patch)
 
-This patch modifies firmware ACPI tables to enable 64bit PCIe address space. This fixes the well known UEFI Windows audio driver error, as well as other potential driver issues in UEFI Windows.  
-After applying this patch OpenCore is no longer needed to make Windows High Definition Audio Driver work in windows.
+This patch modifies firmware ACPI tables to enable PCIe 64bit address space. This fixes the well known UEFI Windows audio driver error, as well as other potential driver issues in UEFI Windows.  
+After applying this patch OpenCore is no longer needed to make the Windows High Definition Audio Driver work in windows.
 
 ## How it works
 
@@ -13,12 +14,12 @@ Original and modified DSDT tables in DSL and AML format are included for informa
 ## How to apply patch
 
 To apply patch use `UEFITool 0.28`.  
-Load your previously backed up firmware file and right-click to replace "as is" volume with guid `7E374E25-8E01-4FEE-87F2-390C23C606CD` with the .ffs file found on the folder corresponding to your iMac model.
+Load your previously backed up firmware file and right-click to "Replace as is..." volume with guid `7E374E25-8E01-4FEE-87F2-390C23C606CD` with the .ffs file found on the folder corresponding to your iMac model.
 
 
 ![](../images/uefitool_64bit_pcie.png)
 
-After replacing volume, select "Save image file..." to obtain the pathched firmware file that you can program to the eeprom.
+After replacing volume, select "Save image file..." to obtain the patched firmware file that you can program back to the eeprom.
 
 
 ## Notes
