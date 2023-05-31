@@ -16,7 +16,7 @@ Effect is the same as selecting "Auto" or "Disabled" in other vendors bios setti
 Patch can be applied to your previously backed up eeprom using ``UEFIPatch``:
 
 ```
-UEFIPatch my_bios.img igpu-disable.txt -o new_bios.img
+UEFIPatch my_bios.img ddr3-freq-limit-disable.txt -o new_bios.img
 ```
 
 After applying it, program ``new_bios.img`` back to eeprom chip.   
@@ -25,4 +25,4 @@ After applying it, program ``new_bios.img`` back to eeprom chip.
 
 - Tested on iMac 12,x with bootrom 87.0.0.0.0.
 - Not all ram modules tested seem to work. If they do not work at 1333 MHz for a start, they will probably not work at higher speeds.
-- The "sweet spot" for Sandy Bridge seems 1600 MHz. Faster modules will bring very little (if any) performance increase.
+- The "sweet spot" for Sandy Bridge seems 1600 MHz. Faster modules may bring very little (if any) performance increase.
