@@ -1,0 +1,15 @@
+# Patch iMac Sandy Bridge to enable CPU turbo overclocking and set per core turbo max multipliers
+# iMac Sandy Bridge
+# by m0bil https://github.com/m0bil
+#
+# v2.1 22/10/2023 - fix wake/sleep
+
+# Configure PPM Policy -> Per core max multipliers (0x2C = 44)
+# Leftmost "0x28" value is 4-core max multiplier, rightmost is 1-core max multiplier.
+A4F2909C-5E2A-438A-91BA-272B0923049A 10 P:FF9068010000488B056DC40100:C7012C2C2C2C488B056DC40100
+
+# Configure PPM Policy -> Enable turbo overclocking
+A4F2909C-5E2A-438A-91BA-272B0923049A 10 P:488B051BCE0100806001FE:488B051BCE010080480201
+
+# Fix S3 sleep to backup and restore turbo config. MSR_IA32_ENERGY_PERFORMANCE_BIAS -> MSR_TURBO_RATIO_LIMIT
+F7731B4C-58A2-4DF4-8980-5645D39ECE58 10 P:00B001000000:00AD01000000
