@@ -25,4 +25,5 @@ After applying it, program ``new_bios.img`` back to eeprom chip.
 
 - Tested on iMac 12,x with bootrom 87.0.0.0.0.
 - Not all ram modules tested seem to work. If they do not work at 1333 MHz for a start, they will probably not work at higher speeds.
-- The "sweet spot" for Sandy Bridge seems 1600 MHz. Faster modules may bring very little (if any) performance increase.
+- The "sweet spot" for Sandy Bridge seems 1600 MHz. Faster modules may bring little performance increase.
+- Some 1867/2133 MHz memory modules fail to boot when frequency limit is removed, but work fine with a 1600 MHz limit. Added patch to limit DDR3 frequency to 1600 MHz.
