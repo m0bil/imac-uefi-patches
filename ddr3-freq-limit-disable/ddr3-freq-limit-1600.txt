@@ -1,12 +1,11 @@
-# Patch iMac 12,x to disable DDR3 frequency limit
+# Patch iMac 12,x to change DDR3 frequency limit
 #
 # Changes the 1333 MHz frequency limit hardcoded in bios to 1600 MHz
 #
 # by m0bil https://github.com/m0bil
 #
-# v1.0 17/05/2023
-
+# v1.0 07/02/2024
 
 # PEI module PlatformStage1Pei
-# Force SaPlatformPolicyPpi->MemConfig->DdrFreqLimit = 0 (Disable)
+# Force SaPlatformPolicyPpi->MemConfig->DdrFreqLimit = 1600
 53984C6A-1B4A-4174-9512-A65E5BC8B278 12 P:66C740013505:66C740014006
