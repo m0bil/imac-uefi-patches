@@ -20,7 +20,7 @@ This patch allow independently setting the Max Core multipliers depending on the
 
 For ease of use I have provided two version of the patch, one sets the 4 max multipliers to x40, and another that sets them to x44, otherwise they are identical. You can also look inside the patch and set your own max multiplier values.
 
-This patch also works for non-K cpus. Setting the max multiplier to the same value on a non-K cpu will allow all four cores to run 4 Bins above the Processor Base Frequency (instead of just one Bin). This means an i7-2600 can run 4 cores at 3800 MHz instead of 3500 MHz without the patch, a nice ~8 speed increase in multi-core use.
+This patch also works for non-K cpus. Setting the max multiplier to the same value on a non-K cpu will allow all four cores to run 4 Bins above the Processor Base Frequency (instead of just one Bin). This means an i7-2600 can run 4 cores at 3800 MHz instead of 3500 MHz without the patch, a nice ~8% speed increase in multi-core use.
 
 For non-K cpus you can safely set the max multiplier higher than the cpu supports, but it will not run faster than the fused value, so you can use the x40 patch for non-K cpus.
 
